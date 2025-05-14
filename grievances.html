@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievances - Our Love Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <header>
+        <div class="logo">S<span class="heart">&hearts;</span>K</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="grievances.html" class="active">Grievances</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="security" class="glass-card">
+            <h2>Security Check</h2>
+            <div class="security-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>⚠️ Only Sana is authorized to file grievances ⚠️<br>Please verify your identity before proceeding</p>
+            </div>
+            
+            <form id="security-form" class="form-container">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <p class="password-hint">Hint: Your favorite person in the whole wide world</p>
+                </div>
+                
+                <button type="submit" class="btn">Verify Identity</button>
+            </form>
+        </section>
+
+        <section id="welcome-message" class="glass-card hidden">
+            <div class="welcome-animation">
+                <h2>Welcome Sana!</h2>
+                <div class="typewriter-text">
+                    <p class="line">This message is from Kanishk who created this website for you...</p>
+                    <p class="line">I wanted to say I'm truly sorry if I've done something to upset you.</p>
+                    <p class="line">You mean the world to me, and I never want to hurt you.</p>
+                    <p class="line">Here's a picture of Archy to brighten your day:</p>
+                </div>
+                <img id="archy-image" src="photos/archy1.jpg" alt="Archy" class="archy-img">
+                <button id="proceed-btn" class="btn">Proceed to File Grievance</button>
+            </div>
+        </section>
+
+        <section id="grievance-form" class="glass-card hidden">
+            <h2>File a Grievance</h2>
+            <form id="complaint-form" class="form-container">
+                <div class="form-group">
+                    <label for="complaint">What did Kanishk do now?</label>
+                    <textarea id="complaint" name="complaint" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stupidity-level">How stupid is Kanishk?</label>
+                    <select id="stupidity-level" name="stupidity-level" required>
+                        <option value="" disabled selected>Select option</option>
+                        <option value="1">Just a little stupid today</option>
+                        <option value="2">Moderately stupid</option>
+                        <option value="3">Very stupid</option>
+                        <option value="4">Exceptionally stupid</option>
+                        <option value="5">Breaking new records of stupidity</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>What can fix this?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="fix" value="schwarma"> Buy you a schwarma</label>
+                        <label><input type="checkbox" name="fix" value="pasta"> Make you pasta</label>
+                        <label><input type="checkbox" name="fix" value="flowers"> Buy you flowers</label>
+                        <label><input type="checkbox" name="fix" value="website"> Make one more website</label>
+                        <label><input type="checkbox" name="fix" value="other"> Other:</label>
+                        <input type="text" id="other-fix" name="other-fix" class="other-input">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Submit Grievance</button>
+            </form>
+        </section>
+
+        <section id="thank-you" class="glass-card hidden">
+            <div class="thank-you-message">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank You!</h2>
+                <p>Thank you for complaining. Kanishk will definitely introspect and do better next time.</p>
+                <p>In the meantime, please listen to this song to feel how sorry Kanishk already is:</p>
+                
+                <div class="audio-player">
+                    <h2 class="song-title">"Sorry Sana"</h2>
+                    <img src="photos/cutepicture.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-info">
+                        <h4>A special apology from Kanishk</h4>
+                    </div>
+                    <audio id="thank-you-audio" src="sorrysana.mp3"></audio>
+                    <div class="audio-controls">
+                        <button id="play-btn" class="audio-btn"><i class="fas fa-play"></i></button>
+                        <button id="pause-btn" class="audio-btn"><i class="fas fa-pause"></i></button>
+                        <button id="restart-btn" class="audio-btn"><i class="fas fa-redo"></i></button>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="btn">Return Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-card">
+        <p>&copy; 2025 Made with <span class="heart">&hearts;</span> by Kanishk</p>
+    </footer>
+
+    <audio id="sorry-audio" src="sorry.mp3" loop></audio>
+    <script src="grievances.js"></script>
+</body>
+</html> 
